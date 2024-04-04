@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        form {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 20px; /* Center the logo horizontally */
+            max-width: 200px; /* Adjust the max width of the logo */
+        }
+    </style>
+</head>
+<body>
+
+    <form method="post">
+        <img src="{{ url_for('static', filename='logo/P_lat.png') }}" alt="Your Logo" class="logo">
+
+
+        <label for="years_of_experience">Years of Experience:</label>
+        <input type="text" name="years_of_experience" required><br>
+        
+        <label for="dp_score">DP Score:</label>
+        <input type="text" name="dp_score" required><br>
+        
+        <label for="speciality">Speciality:</label>
+        <select name="speciality" required>
+            <option value="">Select Speciality</option>
+            <option value="Dentist">Dentist</option>
+            <option value="Gynecologist">Gynecologist</option>
+            <option value="Pediatrician">Pediatrician</option>
+            <option value="Orthopedist">Orthopedist</option>
+            <option value="Dermatologist">Dermatologist</option>
+            <option value="Physiotherapist">Physiotherapist</option>
+            <option value="Infertility_Specialist">Infertility Specialist</option>
+            <option value="Ophthalmologist">Ophthalmologist</option>
+            <option value="Urologist">Urologist</option>
+            <option value="Psychiatrist">Psychiatrist</option>
+            <option value="Cardiologist">Cardiologist</option>
+            <option value="Dietetian">Dietetian</option>
+            <option value="Gastroenterologist">Gastroenterologist</option>
+            <option value="Neurologist">Neurologist</option>
+            <option value="Neurosurgeon">Neurosurgeon</option>
+            <option value="Pulmonologist">Pulmonologist</option>
+            <option value="Bariatric_Surgeon">Bariatric Surgeon</option>
+            <option value="Rheumatologist">Rheumatologist</option>
+            <option value="Chiropractor">Chiropractor</option>
+        </select><br>
+        
+        <label for="degree_type">Degree Type:</label>
+        <select name="degree_type" required>
+            <option value="">Select Degree Type</option>
+            <option value="BDS">BDS</option>
+            <option value="MDS">MDS</option>
+            <option value="MBBS">MBBS</option>
+            <option value="DGO">DGO</option>
+            <option value="MD">MD</option>
+            <option value="DNB">DNB</option>
+            <option value="MS">MS</option>
+            <option value="MRCOG">MRCOG</option>
+            <option value="DCH">DCH</option>
+            <option value="MRCPCH">MRCPCH</option>
+            <option value="MPTh/MPT">MPTh/MPT</option>
+            <option value="BPTh/BPT">BPTh/BPT</option>
+            <option value="DPT">DPT</option>
+            <option value="MCh">MCh</option>
+            <option value="DPM">DPM</option>
+            <option value="DM">DM</option>
+            <option value="MSc">MSc</option>
+            <option value="PhD">PhD</option>
+            <option value="DDPHN">DDPHN</option>
+            <option value="PGDND">PGDND</option>
+            <option value="PGD">PGD</option>
+            <option value="BSc">BSc</option>
+            <option value="DNHE">DNHE</option>
+            <option value="PG">PG</option>
+            <option value="CFN">CFN</option>
+            <option value="DDHN">DDHN</option>
+            <option value="DTCD">DTCD</option>
+            <option value="DC">DC</option>
+            <option value="FNR">FNR</option>
+            <option value="FCPS">FCPS</option>
+            <option value="D.Ortho">D.Ortho</option>
+            <option value="MRCS">MRCS</option>
+            <option value="FRCS">FRCS</option>
+            <option value="DDVL">DDVL</option>
+            <option value="DVD">DVD</option>
+            <option value="DO">DO</option>
+            <option value="TDD">TDD</option>
+            <option value="FIORA">FIORA</option>
+            <option value="PGDPros">PGDPros</option>
+            <option value="FNB">FNB</option>
+            <option value="MPT">MPT</option>
+            <option value="FRM">FRM</option>
+            <option value="BNYS">BNYS</option>
+        </select><br>
+        
+        <label for="npv">NPV:</label>
+        <input type="text" name="npv" required><br>
+        
+        <label for="city">City:</label>
+        <select name="city" required>
+            <option value="">Select City</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Mumbai">Mumbai</option>
+            <option value="Bangalore">Bangalore</option>
+        </select><br>
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
